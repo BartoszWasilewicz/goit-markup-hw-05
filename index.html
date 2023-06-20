@@ -12,6 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <data-modal-close></data-modal-close>
+    <data-modal></data-modal>
     <header class="header-view">
         <div class="container header-content">
         <a href="index.html" class="logo-header"><span>Web</span>Studio</a>
@@ -43,7 +45,7 @@
     <section class="main">
         <div class="container">
         <h1 class="title">Efektywne rozwiązania dla waszego biznesu</h1>
-            <button type="button" class="button_main">Zamów usługę</button>
+            <button type="button" class="button_main" data-modal-open>Zamów usługę</button>
         </div>
     </section>
     <section class="loremipsum">
@@ -353,5 +355,19 @@
         </div>
     </div>
 </footer>
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+            <svg class="modal_button" height="18px" width="18px">
+                <use href="./images/icons/icons.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+        </button>
+        <p>Okno modalne do zadania nr 05</p>
+    </div>
+</div>
+
+<script src="./js/modal.js"></script>
+
 </body>
 </html>
